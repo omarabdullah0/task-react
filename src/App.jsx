@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {  createHashRouter, RouterProvider } from 'react-router-dom'
 import Blogs from './pages/Blogs'
 import Home from './pages/Home'
 import Layout from './pages/Layout'
@@ -16,7 +16,7 @@ function App() {
   const [count, setCount] = useState(0)
 
 
-  const routes = createBrowserRouter([
+  const routes = createHashRouter([
     {path:'/', element:<Layout></Layout>, children:[
       {index:true, element:<Home></Home>},
       {path:'/blogs', element:<Blogs></Blogs>},
